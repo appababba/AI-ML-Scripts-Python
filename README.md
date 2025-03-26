@@ -4,7 +4,7 @@ A collection of Python scripts, covering Artificial Intelligence and Machine Lea
 # zyBooks AI & ML Python Problem Sets
 
 ## Overview
-This repository contains a collection of Python problem sets completed as part of zyBooks coursework on Artificial Intelligence and Machine Learning. The problem sets cover foundational and advanced topics in AI and ML, including classification, regression, deep learning, decision trees, ensemble models, clustering, support vector machines, and dimensionality reduction. These exercises were completed to deepen my understanding of AI/ML concepts and their implementation in Python.
+This repository contains a collection of Python problem sets completed on Artificial Intelligence and Machine Learning. The scripts cover foundational and advanced topics in AI and ML, including classification, regression, deep learning, decision trees, ensemble models, clustering, support vector machines, and dimensionality reduction. These exercises can be completed to deepen your understanding of AI/ML concepts and their implementation in Python.
 
 ## Table of Contents
 - [Overview](#overview)
@@ -12,7 +12,6 @@ This repository contains a collection of Python problem sets completed as part o
 - [Repository Structure](#repository-structure)
 - [Setup and Usage](#setup-and-usage)
 - [Technologies Used](#technologies-used)
-- [About Me](#about-me)
 
 ## Topics Covered
 The problem sets are organized based on the zyBooks curriculum and include the following topics:
@@ -54,3 +53,26 @@ Each folder contains Python scripts (`.py` files) with problem set solutions, al
 1. **Clone the Repository**:
    ```bash
    git clone https://github.com/appababba/zyBooks-AI-ML-Python-Problem-Sets.git
+
+2. **Install Dependencies**:
+
+    Ensure you have Python 3.x installed.
+    Install required libraries (e.g., NumPy, pandas, scikit-learn, TensorFlow) using:
+    bash
+
+    pip install -r requirements.txt
+    Note: If a requirements.txt file is not included, check individual scripts for required libraries.
+
+3. **Run the Code**:
+
+    Navigate to a specific chapter folder (e.g., cd chapter-3-classification-models).
+    Run a script using:
+    bash
+
+python script_name.py
+
+4. **Technologies Used**:
+
+    Python: Primary language for all problem sets.
+    Libraries: Includes NumPy, pandas, scikit-learn (for classification, regression, clustering, SVMs, etc.), TensorFlow/Keras (for deep learning), Matplotlib/Seaborn (for visualization), and other ML-related libraries as needed.
+    Tools: Git for version control.
