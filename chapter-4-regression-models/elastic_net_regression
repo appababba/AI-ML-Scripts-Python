@@ -1,0 +1,47 @@
+"""
+The diamonds dataset contains the price, cut, color, and other characteristics of a sample of nearly 54,000 diamonds. This data can be used to predict the price of a diamond based on its characteristics. Use sklearn's ElasticNet() function to predict the price of a diamond from the diamond's carat and table values.
+
+    Import needed packages for regression.
+    Initialize and fit a model using elastic net regression with a regularization strength of 6, and l1_ratio=0.4.
+    Get the estimated intercept weight.
+    Get the estimated weights of the carat and table features.
+    Predict the price of a diamond with the user-input standardized carat and table values.
+    """
+
+# Import needed packages for regression
+import numpy as np
+import pandas as pd
+from sklearn.preprocessing import StandardScaler
+from sklearn.linear_model import ElasticNet
+
+# Input standardized feature values for a sample instance
+carat = float(input())
+table = float(input())
+
+diamonds = pd.read_csv('diamonds.csv')
+
+# Define input and output features
+X = diamonds[['carat', 'table']]
+y = diamonds[['price']]
+
+# Scale the input features
+scaler = StandardScaler()
+X = scaler.fit_transform(X)
+
+# Initialize a model using elastic net regression with a regularization strength of 6, and l1_ratio=0.4
+model = ElasticNet(alpha=6, l1_ratio=0.4)
+
+# Fit the elastic net model to the input and output features
+model.fit(X, y)
+
+# Get estimated intercept weight
+intercept = model.intercept_
+print('Intercept is', np.round(intercept, 3))
+
+# Get estimated weights for carat and table features
+coefficients = model.coef_
+print('Weights for carat and table features are', np.round(coefficients, 3))
+
+# Predict the price of a diamond with the user-input carat and table values
+prediction = model.predict([[carat, table]])[0]
+print(f'Predicted price is [{np.round(prediction, 2)}]')

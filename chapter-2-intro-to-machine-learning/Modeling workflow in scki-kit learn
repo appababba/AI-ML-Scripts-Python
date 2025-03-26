@@ -1,0 +1,19 @@
+# Import packages and functions
+import numpy as np
+import pandas as pd
+from sklearn.naive_bayes import GaussianNB
+
+# Load the tips dataset
+tipsData = pd.read_csv('tips.csv')
+
+# Create a dataframe X containing 'size' and 'total_bill'
+X = tipsData[['size', 'total_bill']]
+
+# Create a dataframe y containing day
+y = tipsData[['day']]
+
+# Flatten y into an array
+yFlat = np.ravel(y)
+
+print(X.head())
+print(yFlat)

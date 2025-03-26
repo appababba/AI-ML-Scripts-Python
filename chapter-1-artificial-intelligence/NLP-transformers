@@ -1,0 +1,18 @@
+import warnings
+warnings.filterwarnings("ignore")
+# Load pipeline from HuggingFace's transformers library
+from transformers import pipeline
+question1 = "What kind of bar is Daydreamer?"
+question2 = "Where is Daydreamer?"
+context = "Daydreamer is a cocktail and champagne bar located on East 6th Street in Austin, Texas."
+model = pipeline("question-answering", model="distilbert/distilbert-base-cased-distilled-squad")
+model(question=question1, context=context)
+{'score': 0.4553297460079193,
+ 'start': 16,
+ 'end': 38,
+ 'answer': 'cocktail and champagne'}
+model(question=question2, context=context)
+{'score': 0.2544308006763458,
+ 'start': 54,
+ 'end': 86,
+ 'answer': 'East 6th Street in Austin, Texas'}

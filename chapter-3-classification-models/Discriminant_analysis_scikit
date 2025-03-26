@@ -1,0 +1,53 @@
+"""
+The hawks.csv file contains body measurements including age, sex, wing, weight, bill length (culmen) and talon length (hallux) for a sample of hawks observed near Iowa City, Iowa. The data was collected by students and faculty at Cornell College over a 10-year period. There are three species represented in this dataset: Cooper's hawk, red-tailed hawk, and sharp-shinned hawk. Using the csv file hawks.csv and scikit-learn's LinearDiscriminantAnalysis() function, construct a linear discriminant analysis model to classify a hawk's species based on the hawk's wing, weight, and culmen.
+
+    Import the necessary modules for linear discriminant analysis
+    Create dataframe X with features Wing, Weight, and Culmen
+    Create dataframe y with feature Species
+    Standardize the input features
+    Initialize a linear discriminant model with n_components=2
+    Fit the model
+    Print the discriminant intercepts and weight
+    Find the predicted species for the user-input standardized values for wing, weight, and culmen
+
+"""
+
+# Import packages and functions
+import numpy as np
+import pandas as pd
+from sklearn.discriminant_analysis import LinearDiscriminantAnalysis
+from sklearn.preprocessing import StandardScaler
+
+# Input standardized feature values for a sample instance
+wing = float(input())
+weight = float(input())
+culmen = float(input())
+
+# Load the Hawks dataset
+hawks = pd.read_csv('hawks.csv')
+
+# Define input features and output features
+X = hawks[['Wing', 'Weight', 'Culmen']]
+y = hawks[['Species']]
+
+# Standardize input features
+scaler = StandardScaler()
+X_scaled = scaler.fit_transform(X)
+
+# Initialize a linear discriminant model
+lda = LinearDiscriminantAnalysis(n_components=2)
+
+# Fit the model
+lda.fit(X_scaled, np.ravel(y))
+
+# Discriminant intercepts
+intercept = lda.intercept_
+print(intercept)
+
+# Discriminant weights
+weights = lda.coef_
+print(weights)
+
+# Calculate prediction
+preds = lda.predict([[wing, weight, culmen]])
+print("Predicted species is ", preds)
