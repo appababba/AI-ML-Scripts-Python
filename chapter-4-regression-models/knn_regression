@@ -1,12 +1,3 @@
-"""
-The diamonds dataset contains the price, cut, color, and other characteristics of a sample of nearly 54,000 diamonds. This data can be used to predict the price of a diamond based on its characteristics. Use sklearn's KNeighborsRegressor() function to predict the price of a diamond from the diamond's carat and table values.
-
-    Import needed packages for regression.
-    Initialize and fit a k-nearest neighbor regression model using a Euclidean distance metric and k=12.
-    Predict the price of a diamond with the user-input carat and table values.
-    Find the distances and indices of the 12 nearest neighbors for the user-input instance
-"""
-
 # Import needed packages for regression
 import numpy as np
 import pandas as pd

@@ -1,12 +1,4 @@
-"""
-The nbaallelo_log file contains data on 126314 NBA games from 1947 to 2015. The dataset includes the features pts, elo_i, win_equiv, and game_result. Using the csv file nbaallelo_log.csv and scikit-learn's LogisticRegression() function, construct a logistic regression model to classify whether a team will win or lose a game based on the team's elo_i score.
 
-    Create a binary feature win for game_result with 0 for L and 1 for W
-    Use the LogisticRegression() function with penalty='l2' to construct a logistic regression model with win as the target and elo_i as the predictor
-    Print the weights and intercept of the fitted model
-    Find the proportion of instances correctly classified
-    
-    """
 import pandas as pd
 import numpy as np
 from sklearn.linear_model import LogisticRegression

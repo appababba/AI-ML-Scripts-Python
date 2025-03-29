@@ -1,13 +1,3 @@
-""" The file SDSS contains 17 observational features and one class feature for 10000 deep sky objects observed by the Sloan Digital Sky Survey. Use sklearn's GaussianNB() function to perform Gaussian naive Bayes classification to classify each object by the object's redshift and u-g color.
-
-    Import the necessary modules for Gaussian naive Bayes classification
-    Create dataframe X with features redshift and u_g
-    Create dataframe y with feature class
-    Initialize a Gaussian naive Bayes model with the default parameters
-    Fit the model
-    Calculate the accuracy score
-    """
-
 # Import the necessary modules
 import numpy as np
 import pandas as pd

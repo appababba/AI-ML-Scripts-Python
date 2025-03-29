@@ -1,10 +1,3 @@
-"""
-The diamonds.csv dataset contains the price, cut, color, and other characteristics of a sample of diamonds. The dataframe X contains all the features except cut, color, clarity, and price. The dataframe y contains the feature price.
-
-    Define a standardization scaler and apply the scaler to Xtrain and Xtest.
-    Initialize and fit a multilayer perceptron regressor with with random_state=42, three hidden layers of 50 nodes each, an adaptive learning rate of 0.01, a batch size of 100, and a maximum of 300 iterations.
-    Print the R-squared scores for the training data and the testing data, rounded to the fourth decimal place."""
-
 import numpy as np
 import pandas as pd
 from sklearn.model_selection import train_test_split

@@ -1,12 +1,3 @@
-"""
-The homes.csv dataset contains information for houses sold in King County, Washington in 2014. Features include sales price, square footage, number of bedrooms and bathrooms, and the number of floors. The priceFloor dataframe contains the features Price and Floor. The school dataframe contains the feature School.
-
-    Define a standardization scaler to transform values and apply the scaler to the priceFloor data.
-    Define a normalization scaler to transform values and apply the scaler to the priceFloor data.
-    Define an ordinal encoder using OrdinalEncoder(). Apply the ordinal encoder to the school data. Add the encoded labels as a column labeled encoding to the school dataframe.
-    Create and fit a discretizer with equal weights and 3 bins to the Floor feature from the priceFloor data. Reshape the feature to an array with dimensions (76,1).
-"""
-
 import pandas as pd
 import numpy as np
 from sklearn.preprocessing import StandardScaler
