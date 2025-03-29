@@ -1,7 +1,7 @@
 # AI-ML-Scripts-Python
 A collection of Python scripts, covering Artificial Intelligence and Machine Learning topics like classification, regression, deep learning, and decision trees, ensemble models, clustering, support vector machines, and dimensionality reduction.
 
-# zyBooks AI & ML Python Problem Sets
+# AI & ML Python Problems
 
 ## Overview
 This repository contains a collection of Python problem sets completed on Artificial Intelligence and Machine Learning. The scripts cover foundational and advanced topics in AI and ML, including classification, regression, deep learning, decision trees, ensemble models, clustering, support vector machines, and dimensionality reduction. These exercises can be completed to deepen your understanding of AI/ML concepts and their implementation in Python.
