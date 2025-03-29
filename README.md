@@ -14,7 +14,7 @@ This repository contains a collection of Python problem sets completed on Artifi
 - [Technologies Used](#technologies-used)
 
 ## Topics Covered
-The problem sets are organized based on the zyBooks curriculum and include the following topics:
+The problem sets include the following topics:
 1. **Artificial Intelligence**: Introduction to AI concepts and applications.
 2. **Intro to Machine Learning**: Basics of ML, including supervised and unsupervised learning.
 3. **Classification Models**: Implementing models like logistic regression and k-nearest neighbors.
